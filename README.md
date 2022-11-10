@@ -51,3 +51,45 @@ Your program should create files with a ticket for each booking.
    program/classes might solve the task it is supposed to do.
 
 
+## Example of parsing a csv file c++ style ,-)
+
+```
+#include <iostream>
+#include <fstream>
+#include <sstream>
+using namespace std;
+
+int readFile(string filename)
+{
+	int numlines = 0;
+	string line;
+	ifstream inx(filename);
+	if( !inx.is_open() ) return(0);
+	
+	while (getline (inx, line)) {
+		numlines++;
+		stringstream sstr(line);
+		while(sstr.good())
+		{
+			string substr;
+			getline(sstr, substr, ',');
+			cout << "[" << substr << "]";
+		}
+		cout << endl;
+	}
+	return(numlines);
+}
+
+int main()
+{
+	readFile("test.csv");
+	return 0;
+}
+```
+
+the test.csv file looks like
+
+```
+abc,def,ghi
+123,234,345,45,6
+```
