@@ -5,7 +5,12 @@
 1. Where do you begin?
 
    Define the task the software should accomplish.
-
+```
+You should create a program that takes two arguments.
+The first argument is a file with flight information.
+The second argument is a file with booking information.
+Your program should create files with a ticket for each booking.
+```
    Gather all information you can get.
 
    While looking at the information, would you solve the task?
@@ -27,12 +32,6 @@
    Some objects are obvious, they represent data. By looking at the information you
    got in step 1, you could start creating those objects that represent data.
 
-```
-You should create a program that takes two arguments.
-The first argument is a file with flight information.
-The second argument is a file with booking information.
-Your program should create files with a ticket for each booking.
-```
   Do you need any other objects that manages the objects you found?
   Are there any processes you could identify? Could they be objects that perform these processes?
 
